@@ -1,16 +1,13 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const HeroSection: React.FC = () => {
-  return (
-    <div className="relative bg-gradient-to-b from-white to-brand-beige">
+  return <div className="relative bg-gradient-to-b from-white to-brand-beige">
       <div className="container mx-auto px-4 py-20 md:py-32">
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
             <div className="mb-6">
-              <div className="inline-block bg-brand-orange/10 text-brand-orange rounded-full px-3 py-1 text-sm font-medium mb-4">
+              <div className="inline-block text-brand-white rounded-full px-3 py-1 text-sm font-medium mb-4 bg-[#2864eb]/[0.43]">
                 Next-Gen AI Training
               </div>
               <h1 className="font-bold leading-tight mb-4 text-brand-navy">
@@ -71,8 +68,6 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default HeroSection;

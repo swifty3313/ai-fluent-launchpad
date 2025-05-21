@@ -101,7 +101,7 @@ const ServiceSection: React.FC = () => {
             Not sure which service is right for you? Contact us for a personalized recommendation.
           </p>
           <Button asChild size="lg" variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue/10">
-            <a href="#contact">Book a Free Consultation</a>
+            <a href="https://calendly.com/clswift3313/first-consultation" target="_blank" rel="noopener noreferrer">Book a Free Consultation</a>
           </Button>
         </div>
       </div>

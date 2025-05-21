@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
                     <div className="w-6 h-6 rounded-full bg-brand-blue/20 flex items-center justify-center text-xs font-medium text-brand-blue mr-2">AI</div>
                     <p className="text-sm font-medium">ChatGPT Assistant</p>
                   </div>
-                  <p className="text-brand-slate text-sm">I've analyzed your quarterly report and found 3 key opportunities for growth. Here's a concise action plan with priority tasks...</p>
+                  <p className="text-brand-slate text-sm">I've summarized your meeting notes and highlighted 3 key follow-ups. Here's a quick draft of the action items to share with your team…</p>
                 </div>
                 
                 <div className="border border-brand-beige rounded-md p-4">
@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
                     <div className="w-6 h-6 rounded-full bg-brand-orange/20 flex items-center justify-center text-xs font-medium text-brand-orange mr-2">You</div>
                     <p className="text-sm font-medium">Team Lead</p>
                   </div>
-                  <p className="text-brand-slate text-sm">Generate a detailed project timeline for our new product launch, including key milestones and resource allocation.</p>
+                  <p className="text-brand-slate text-sm">Summarize this meeting transcript and create a follow-up email I can send to my team.</p>
                 </div>
               </div>
             </div>

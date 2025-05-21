@@ -5,7 +5,6 @@ import AboutSection from '@/components/AboutSection';
 import CourseSection from '@/components/CourseSection';
 import ServiceSection from '@/components/ServiceSection';
 import TestimonialSection from '@/components/TestimonialSection';
-import ContactSection from '@/components/ContactSection';
 import { Toaster } from "@/components/ui/toaster";
 
 const Index: React.FC = () => {
@@ -17,7 +16,6 @@ const Index: React.FC = () => {
       <CourseSection />
       <ServiceSection />
       <TestimonialSection />
-      <ContactSection />
     </div>
   );
 };

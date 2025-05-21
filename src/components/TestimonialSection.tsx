@@ -106,7 +106,7 @@ const TestimonialSection: React.FC = () => {
         
         <div className="text-center mt-16">
           <Button asChild size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white">
-            <a href="#courses">Get Started Today</a>
+            <a href="#courses">Contact Us</a>
           </Button>
         </div>
       </div>

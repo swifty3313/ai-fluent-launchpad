@@ -12,11 +12,9 @@ const ContactSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="mb-16 max-w-3xl mx-auto">
-          {/* Contact Methods - Now full width */}
-          <div className="bg-white rounded-xl p-8 border border-brand-beige/50 shadow-sm">
-            <h3 className="text-2xl font-bold mb-8 text-brand-navy text-center">Get in Touch</h3>
-            
+        <div className="max-w-3xl mx-auto">
+          {/* Contact Methods - direct contact methods without heading */}
+          <div className="bg-white rounded-xl p-8 border border-brand-beige/50 shadow-sm">            
             <div className="grid md:grid-cols-3 gap-6">
               <div className="flex items-center md:flex-col md:items-center md:text-center">
                 <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
@@ -62,8 +60,7 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="text-center">
-          <p className="text-xl font-semibold mb-4 text-brand-navy">Ready to transform your AI skills?</p>
+        <div className="text-center mt-16">
           <Button asChild size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white">
             <a href="#courses">Get Started Today</a>
           </Button>

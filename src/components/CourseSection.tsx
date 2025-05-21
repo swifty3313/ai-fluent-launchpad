@@ -81,28 +81,33 @@ const CourseSection: React.FC = () => {
             
             <div className="p-6">
               <div className="space-y-6">
-                {freeCourses.map((course, index) => (
-                  <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
-                    <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
-                    <CardContent className="p-4">
-                      <div className="flex">
-                        <div className="flex-shrink-0 mr-4">
-                          <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center">
-                            <span className="font-semibold text-brand-orange">{index + 1}</span>
+                {freeCourses.map((course, index) => {
+                  // Extract colors from gradient string for dot color
+                  const colorClass = course.gradient.split(' ')[1]; // e.g. "to-blue-600"
+                  
+                  return (
+                    <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
+                      <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
+                      <CardContent className="p-4">
+                        <div className="flex">
+                          <div className="flex-shrink-0 mr-4">
+                            <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
+                              <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 1}</span>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-lg">{course.title}</h4>
+                            <p className="text-gray-600 mb-2">{course.description}</p>
+                            <div className="flex text-sm text-gray-500">
+                              <span className="mr-4">{course.lessons} lessons</span>
+                              <span>{course.duration}</span>
+                            </div>
                           </div>
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-lg">{course.title}</h4>
-                          <p className="text-gray-600 mb-2">{course.description}</p>
-                          <div className="flex text-sm text-gray-500">
-                            <span className="mr-4">{course.lessons} lessons</span>
-                            <span>{course.duration}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
               
               <Button asChild className="w-full mt-8 bg-brand-orange hover:bg-brand-orange/90">
@@ -125,28 +130,33 @@ const CourseSection: React.FC = () => {
             
             <div className="p-6">
               <div className="space-y-6">
-                {proCourses.map((course, index) => (
-                  <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
-                    <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
-                    <CardContent className="p-4">
-                      <div className="flex">
-                        <div className="flex-shrink-0 mr-4">
-                          <div className="w-10 h-10 rounded-full bg-brand-blue/10 flex items-center justify-center">
-                            <span className="font-semibold text-brand-blue">{index + 4}</span>
+                {proCourses.map((course, index) => {
+                  // Extract colors from gradient string for dot color
+                  const colorClass = course.gradient.split(' ')[1]; // e.g. "to-amber-600"
+                  
+                  return (
+                    <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
+                      <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
+                      <CardContent className="p-4">
+                        <div className="flex">
+                          <div className="flex-shrink-0 mr-4">
+                            <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
+                              <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 4}</span>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-lg">{course.title}</h4>
+                            <p className="text-gray-600 mb-2">{course.description}</p>
+                            <div className="flex text-sm text-gray-500">
+                              <span className="mr-4">{course.lessons} lessons</span>
+                              <span>{course.duration}</span>
+                            </div>
                           </div>
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-lg">{course.title}</h4>
-                          <p className="text-gray-600 mb-2">{course.description}</p>
-                          <div className="flex text-sm text-gray-500">
-                            <span className="mr-4">{course.lessons} lessons</span>
-                            <span>{course.duration}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
               
               <div className="mt-8 mb-4">

@@ -1,15 +1,14 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Phone, Calendar, Check } from 'lucide-react';
-
 const ContactSection: React.FC = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
-
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
@@ -17,7 +16,7 @@ const ContactSection: React.FC = () => {
       // In a real app, you would send this to your backend
       toast({
         title: "Thanks for subscribing!",
-        description: "You've been added to our newsletter list.",
+        description: "You've been added to our newsletter list."
       });
       setSubscribed(true);
       setEmail('');
@@ -25,13 +24,11 @@ const ContactSection: React.FC = () => {
       toast({
         title: "Email required",
         description: "Please enter your email address.",
-        variant: "destructive",
+        variant: "destructive"
       });
     }
   };
-
-  return (
-    <section id="contact" className="section-padding bg-brand-beige">
+  return <section id="contact" className="section-padding bg-brand-beige">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="mb-4 text-brand-navy">Ready to <span className="text-gradient">Get Started?</span></h2>
@@ -52,7 +49,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-sm text-brand-slate">Email Us</div>
-                  <div className="font-medium text-brand-navy">hello@fullsendai.com</div>
+                  <div className="font-medium text-brand-navy">colin@fullsendaiconsulting.com</div>
                 </div>
               </div>
               
@@ -61,8 +58,8 @@ const ContactSection: React.FC = () => {
                   <Phone className="h-5 w-5 text-brand-blue" />
                 </div>
                 <div>
-                  <div className="text-sm text-brand-slate">Call Us</div>
-                  <div className="font-medium text-brand-navy">(555) 123-4567</div>
+                  <div className="text-sm text-brand-slate">Connect with Us</div>
+                  <div className="font-medium text-brand-navy">765-586-1609</div>
                 </div>
               </div>
               
@@ -71,7 +68,7 @@ const ContactSection: React.FC = () => {
                   <Calendar className="h-5 w-5 text-green-600" />
                 </div>
                 <div>
-                  <div className="text-sm text-brand-slate">Schedule a Demo</div>
+                  <div className="text-sm text-brand-slate">Schedule a Free Consultation</div>
                   <Button asChild variant="link" className="p-0 h-auto font-medium text-green-600">
                     <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                       Book a time slot
@@ -89,31 +86,20 @@ const ContactSection: React.FC = () => {
               Get weekly AI productivity tips, exclusive tutorials, and updates on our latest courses.
             </p>
             
-            {subscribed ? (
-              <div className="flex items-center bg-white/10 rounded-lg p-4">
+            {subscribed ? <div className="flex items-center bg-white/10 rounded-lg p-4">
                 <Check className="h-6 w-6 mr-3 text-green-400" />
                 <p>Thanks for subscribing! Check your inbox soon.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="space-y-4">
+              </div> : <form onSubmit={handleSubscribe} className="space-y-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-1 text-brand-beige/80">
                     Email Address
                   </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="your@email.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                  />
+                  <Input id="email" type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
                 </div>
                 <Button type="submit" className="w-full bg-brand-orange text-white hover:bg-brand-orange/90">
                   Subscribe
                 </Button>
-              </form>
-            )}
+              </form>}
             
             <div className="mt-6 text-sm text-brand-beige/80">
               We respect your privacy. Unsubscribe at any time.
@@ -128,8 +114,6 @@ const ContactSection: React.FC = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;

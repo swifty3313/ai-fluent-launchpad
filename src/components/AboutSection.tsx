@@ -6,7 +6,7 @@ const AboutSection: React.FC = () => {
   const features = [
     {
       title: "Profile Setup & Optimization",
-      description: "We help you set up and optimize your AI assistant profiles for maximum effectiveness."
+      description: "We help you set up and optimize AI tools and profiles for maximum effectiveness."
     },
     {
       title: "Custom AI Solutions",

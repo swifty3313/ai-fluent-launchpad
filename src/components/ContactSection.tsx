@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Calendar } from 'lucide-react';
+import { Mail, Phone, Calendar, Linkedin } from 'lucide-react';
 const ContactSection: React.FC = () => {
   return <section id="contact" className="section-padding bg-brand-beige">
       <div className="container mx-auto px-4">
@@ -33,7 +34,14 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-sm text-brand-slate">Connect with Us</div>
-                  <div className="font-medium text-brand-navy">LinkedIn</div>
+                  <a 
+                    href="https://www.linkedin.com/company/full-send-ai-consulting/?viewAsMember=true" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-medium text-brand-navy hover:text-brand-blue transition-colors"
+                  >
+                    LinkedIn
+                  </a>
                 </div>
               </div>
               

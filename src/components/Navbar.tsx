@@ -14,33 +14,33 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center">
           <h2 className="text-xl font-bold">
-            <span className="text-fsai-orange">Full Send</span> 
-            <span className="text-fsai-blue">AI</span>
+            <span className="text-brand-orange">Full Send</span> 
+            <span className="text-brand-navy">AI</span>
           </h2>
         </div>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="#about" className="text-sm font-medium hover:text-fsai-orange transition-colors">
+          <a href="#about" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
             About
           </a>
-          <a href="#courses" className="text-sm font-medium hover:text-fsai-orange transition-colors">
+          <a href="#courses" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
             Courses
           </a>
-          <a href="#services" className="text-sm font-medium hover:text-fsai-orange transition-colors">
+          <a href="#services" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
             Services
           </a>
-          <a href="#testimonials" className="text-sm font-medium hover:text-fsai-orange transition-colors">
+          <a href="#testimonials" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
             Testimonials
           </a>
-          <Button asChild className="bg-fsai-orange hover:bg-fsai-orange/90 text-white">
+          <Button asChild className="bg-brand-orange hover:bg-brand-orange/90 text-white">
             <a href="#contact">Get Started</a>
           </Button>
         </div>
 
         {/* Mobile menu button */}
         <button 
-          className="md:hidden p-2 text-gray-600 hover:text-fsai-orange"
+          className="md:hidden p-2 text-brand-navy hover:text-brand-orange"
           onClick={toggleMenu}
           aria-expanded={isMenuOpen}
         >
@@ -54,35 +54,35 @@ const Navbar: React.FC = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a 
               href="#about" 
-              className="text-sm font-medium hover:text-fsai-orange transition-colors py-2"
+              className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </a>
             <a 
               href="#courses" 
-              className="text-sm font-medium hover:text-fsai-orange transition-colors py-2"
+              className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Courses
             </a>
             <a 
               href="#services" 
-              className="text-sm font-medium hover:text-fsai-orange transition-colors py-2"
+              className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </a>
             <a 
               href="#testimonials" 
-              className="text-sm font-medium hover:text-fsai-orange transition-colors py-2"
+              className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Testimonials
             </a>
             <Button 
               asChild 
-              className="bg-fsai-orange hover:bg-fsai-orange/90 text-white w-full"
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white w-full"
               onClick={() => setIsMenuOpen(false)}
             >
               <a href="#contact">Get Started</a>

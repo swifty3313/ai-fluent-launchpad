@@ -63,10 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Full Send AI
-				fsai: {
-					orange: '#F97316',
-					blue: '#0C4A6E',
+				// Brand colors
+				brand: {
+					navy: '#1E2A38',    // Primary Navy
+					orange: '#F97316',  // Accent Orange 
+					blue: '#2563EB',    // Secondary Blue
+					beige: '#F4F1EC',   // Warm Beige
+					slate: '#64748B',   // Slate Gray
 				}
 			},
 			borderRadius: {

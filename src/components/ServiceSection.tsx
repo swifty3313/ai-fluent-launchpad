@@ -15,7 +15,7 @@ const ServiceSection: React.FC = () => {
         "Hands-on exercises with real use cases",
         "Implementation roadmap"
       ],
-      primaryColor: "bg-fsai-orange",
+      primaryColor: "bg-brand-orange",
       action: "Schedule Workshop"
     },
     {
@@ -28,7 +28,7 @@ const ServiceSection: React.FC = () => {
         "Weekly coaching calls",
         "Custom workflow development"
       ],
-      primaryColor: "bg-fsai-blue",
+      primaryColor: "bg-brand-blue",
       action: "Explore Training"
     },
     {
@@ -47,11 +47,11 @@ const ServiceSection: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-white">
+    <section id="services" className="section-padding bg-brand-beige">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="mb-4">Our <span className="text-gradient">Services</span></h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="mb-4 text-brand-navy">Our <span className="text-gradient">Services</span></h2>
+          <p className="text-xl text-brand-slate max-w-3xl mx-auto">
             From workshops to comprehensive training programs, we offer services designed to elevate
             your team's AI capabilities and transform your workflows.
           </p>
@@ -59,7 +59,7 @@ const ServiceSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+            <div key={index} className="bg-white rounded-xl shadow-sm border border-brand-beige/50 overflow-hidden hover:shadow-md transition-shadow">
               <div className={`${service.primaryColor} p-4 flex items-center`}>
                 <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
                   {service.icon}
@@ -68,13 +68,13 @@ const ServiceSection: React.FC = () => {
               </div>
               
               <div className="p-6">
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                <p className="text-brand-slate mb-6">{service.description}</p>
                 
                 <div className="space-y-3 mb-8">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start">
                       <div className={`w-2 h-2 ${service.primaryColor} rounded-full mt-2 mr-3`}></div>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-brand-slate">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -82,10 +82,10 @@ const ServiceSection: React.FC = () => {
                 <Button 
                   asChild 
                   className={`w-full ${
-                    service.primaryColor === 'bg-fsai-orange' 
-                      ? 'bg-fsai-orange hover:bg-fsai-orange/90' 
-                      : service.primaryColor === 'bg-fsai-blue'
-                      ? 'bg-fsai-blue hover:bg-fsai-blue/90'
+                    service.primaryColor === 'bg-brand-orange' 
+                      ? 'bg-brand-orange hover:bg-brand-orange/90' 
+                      : service.primaryColor === 'bg-brand-blue'
+                      ? 'bg-brand-blue hover:bg-brand-blue/90'
                       : 'bg-green-600 hover:bg-green-600/90'
                   }`}
                 >
@@ -97,10 +97,10 @@ const ServiceSection: React.FC = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">
+          <p className="text-brand-slate mb-6">
             Not sure which service is right for you? Contact us for a personalized recommendation.
           </p>
-          <Button asChild size="lg" variant="outline" className="border-fsai-blue text-fsai-blue hover:bg-fsai-blue/10">
+          <Button asChild size="lg" variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue/10">
             <a href="#contact">Book a Free Consultation</a>
           </Button>
         </div>

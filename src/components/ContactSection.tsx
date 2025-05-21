@@ -31,38 +31,38 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-brand-beige">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="mb-4">Ready to <span className="text-gradient">Get Started?</span></h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="mb-4 text-brand-navy">Ready to <span className="text-gradient">Get Started?</span></h2>
+          <p className="text-xl text-brand-slate max-w-3xl mx-auto">
             Take the first step toward AI mastery. Contact us to learn more about our courses and services.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {/* Contact Methods */}
-          <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
-            <h3 className="text-2xl font-bold mb-8">Get in Touch</h3>
+          <div className="bg-white rounded-xl p-8 border border-brand-beige/50">
+            <h3 className="text-2xl font-bold mb-8 text-brand-navy">Get in Touch</h3>
             
             <div className="space-y-6">
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-fsai-orange/10 flex items-center justify-center mr-4">
-                  <Mail className="h-5 w-5 text-fsai-orange" />
+                <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mr-4">
+                  <Mail className="h-5 w-5 text-brand-orange" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-600">Email Us</div>
-                  <div className="font-medium">hello@fullsendai.com</div>
+                  <div className="text-sm text-brand-slate">Email Us</div>
+                  <div className="font-medium text-brand-navy">hello@fullsendai.com</div>
                 </div>
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-fsai-blue/10 flex items-center justify-center mr-4">
-                  <Phone className="h-5 w-5 text-fsai-blue" />
+                <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center mr-4">
+                  <Phone className="h-5 w-5 text-brand-blue" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-600">Call Us</div>
-                  <div className="font-medium">(555) 123-4567</div>
+                  <div className="text-sm text-brand-slate">Call Us</div>
+                  <div className="font-medium text-brand-navy">(555) 123-4567</div>
                 </div>
               </div>
               
@@ -71,7 +71,7 @@ const ContactSection: React.FC = () => {
                   <Calendar className="h-5 w-5 text-green-600" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-600">Schedule a Demo</div>
+                  <div className="text-sm text-brand-slate">Schedule a Demo</div>
                   <Button asChild variant="link" className="p-0 h-auto font-medium text-green-600">
                     <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                       Book a time slot
@@ -83,9 +83,9 @@ const ContactSection: React.FC = () => {
           </div>
           
           {/* Newsletter Signup */}
-          <div className="bg-fsai-blue rounded-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Join Our Newsletter</h3>
-            <p className="mb-6">
+          <div className="bg-brand-navy rounded-xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4 text-white">Join Our Newsletter</h3>
+            <p className="mb-6 text-brand-beige/80">
               Get weekly AI productivity tips, exclusive tutorials, and updates on our latest courses.
             </p>
             
@@ -97,7 +97,7 @@ const ContactSection: React.FC = () => {
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-4">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-brand-beige/80">
                     Email Address
                   </label>
                   <Input
@@ -109,21 +109,21 @@ const ContactSection: React.FC = () => {
                     className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                   />
                 </div>
-                <Button type="submit" className="w-full bg-white text-fsai-blue hover:bg-white/90">
+                <Button type="submit" className="w-full bg-brand-orange text-white hover:bg-brand-orange/90">
                   Subscribe
                 </Button>
               </form>
             )}
             
-            <div className="mt-6 text-sm text-white/80">
+            <div className="mt-6 text-sm text-brand-beige/80">
               We respect your privacy. Unsubscribe at any time.
             </div>
           </div>
         </div>
         
         <div className="text-center">
-          <p className="text-xl font-semibold mb-4">Ready to transform your AI skills?</p>
-          <Button asChild size="lg" className="bg-fsai-orange hover:bg-fsai-orange/90 text-white">
+          <p className="text-xl font-semibold mb-4 text-brand-navy">Ready to transform your AI skills?</p>
+          <Button asChild size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white">
             <a href="#courses">Get Started Today</a>
           </Button>
         </div>

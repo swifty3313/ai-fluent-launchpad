@@ -10,7 +10,7 @@ const AboutSection: React.FC = () => {
     },
     {
       title: "Custom AI Solutions",
-      description: "Create specialized AI assistants tailored to your specific industry and workflow needs."
+      description: "Design specialized AI solutions tailored to your specific industry and workflow needs."
     },
     {
       title: "Workflow Integration",

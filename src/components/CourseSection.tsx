@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Check, Star } from 'lucide-react';
+import { Check, Star, Image } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
 const CourseSection: React.FC = () => {
@@ -91,8 +90,8 @@ const CourseSection: React.FC = () => {
                       <CardContent className="p-4">
                         <div className="flex">
                           <div className="flex-shrink-0 mr-4">
-                            <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
-                              <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 1}</span>
+                            <div className={`w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center`}>
+                              <span className={`font-semibold text-brand-orange`}>{index + 1}</span>
                             </div>
                           </div>
                           <div>
@@ -140,8 +139,8 @@ const CourseSection: React.FC = () => {
                       <CardContent className="p-4">
                         <div className="flex">
                           <div className="flex-shrink-0 mr-4">
-                            <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
-                              <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 4}</span>
+                            <div className={`w-10 h-10 rounded-full bg-brand-blue/10 flex items-center justify-center`}>
+                              <span className={`font-semibold text-brand-blue`}>{index + 4}</span>
                             </div>
                           </div>
                           <div>
@@ -172,6 +171,43 @@ const CourseSection: React.FC = () => {
               <div className="flex items-center justify-center text-sm text-gray-500">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 <span>14-day money-back guarantee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* New image section to fill whitespace */}
+        <div className="mt-16 rounded-xl overflow-hidden shadow-md">
+          <div className="bg-gradient-to-r from-brand-orange to-brand-blue p-1">
+            <div className="bg-white p-6 rounded-lg">
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="w-full md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                  <h3 className="text-2xl font-bold mb-4">Ready to Transform Your <span className="text-gradient">AI Skills?</span></h3>
+                  <p className="text-gray-600 mb-6">
+                    Join our community of AI productivity masters and start applying these powerful tools
+                    to your daily workflow immediately.
+                  </p>
+                  <div className="flex items-center space-x-2 text-sm mb-4">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-brand-orange/20 flex items-center justify-center mr-2">
+                        <Check className="h-3 w-3 text-brand-orange" />
+                      </div>
+                      <span>Self-paced learning</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-brand-blue/20 flex items-center justify-center mr-2">
+                        <Check className="h-3 w-3 text-brand-blue" />
+                      </div>
+                      <span>Lifetime access</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 bg-brand-beige/50 p-4 rounded-lg flex items-center justify-center">
+                  <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-brand-blue/10 to-brand-orange/10 rounded-lg overflow-hidden flex items-center justify-center">
+                    <Image className="h-16 w-16 text-gray-400" />
+                    <p className="absolute bottom-2 text-xs text-gray-500">AI-assisted workflow visualization</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

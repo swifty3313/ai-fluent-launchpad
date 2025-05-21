@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
       description: "We help you set up and optimize your AI assistant profiles for maximum effectiveness."
     },
     {
-      title: "Custom GPT SMEs",
+      title: "Custom AI Solutions",
       description: "Create specialized AI assistants tailored to your specific industry and workflow needs."
     },
     {

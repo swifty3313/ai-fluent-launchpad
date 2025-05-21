@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar } from 'lucide-react';
-
 const ContactSection: React.FC = () => {
   return <section id="contact" className="section-padding bg-brand-beige">
       <div className="container mx-auto px-4">
@@ -16,7 +14,7 @@ const ContactSection: React.FC = () => {
         <div className="mb-16 max-w-3xl mx-auto">
           {/* Contact Methods - Now full width */}
           <div className="bg-white rounded-xl p-8 border border-brand-beige/50 shadow-sm">
-            <h3 className="text-2xl font-bold mb-8 text-brand-navy">Get in Touch</h3>
+            <h3 className="text-2xl font-bold mb-8 text-brand-navy text-center">Get in Touch</h3>
             
             <div className="grid md:grid-cols-3 gap-6">
               <div className="flex items-center md:flex-col md:items-center md:text-center">
@@ -35,7 +33,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-sm text-brand-slate">Connect with Us</div>
-                  <div className="font-medium text-brand-navy">765-586-1609</div>
+                  <div className="font-medium text-brand-navy">LinkedIn</div>
                 </div>
               </div>
               
@@ -65,5 +63,4 @@ const ContactSection: React.FC = () => {
       </div>
     </section>;
 };
-
 export default ContactSection;

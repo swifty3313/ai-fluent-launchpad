@@ -11,21 +11,21 @@ const CourseSection: React.FC = () => {
       description: "Understand how AI and Large Language Models work",
       lessons: 5,
       duration: "2 hours",
-      gradient: "from-blue-400/80 to-blue-600"
+      gradient: "from-gray-400/80 to-gray-500"
     },
     {
       title: "Basic Prompt Engineering",
       description: "Learn how to craft effective prompts for better results",
       lessons: 4,
       duration: "1.5 hours",
-      gradient: "from-green-400/80 to-green-600"
+      gradient: "from-gray-400/80 to-gray-500"
     },
     {
       title: "Workflow Integration Basics",
       description: "Start integrating AI into your daily tasks",
       lessons: 3,
       duration: "1 hour",
-      gradient: "from-purple-400/80 to-purple-600"
+      gradient: "from-gray-400/80 to-gray-500"
     }
   ];
 
@@ -35,28 +35,28 @@ const CourseSection: React.FC = () => {
       description: "Master complex prompting strategies for specialized tasks",
       lessons: 8,
       duration: "3 hours",
-      gradient: "from-amber-400/80 to-amber-600"
+      gradient: "from-yellow-400/80 to-yellow-500"
     },
     {
       title: "Custom GPT Building",
       description: "Create your own specialized AI assistants",
       lessons: 6,
       duration: "2.5 hours",
-      gradient: "from-red-400/80 to-red-600"
+      gradient: "from-yellow-400/80 to-yellow-500"
     },
     {
       title: "API Integration",
       description: "Connect AI to your applications and software",
       lessons: 7,
       duration: "3 hours",
-      gradient: "from-cyan-400/80 to-cyan-600"
+      gradient: "from-yellow-400/80 to-yellow-500"
     },
     {
       title: "Enterprise AI Strategy",
       description: "Develop organization-wide AI implementation plans",
       lessons: 5,
       duration: "2 hours",
-      gradient: "from-pink-400/80 to-pink-600"
+      gradient: "from-yellow-400/80 to-yellow-500"
     }
   ];
 
@@ -74,43 +74,38 @@ const CourseSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Free Track Column */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="bg-gradient-to-r from-brand-orange/90 to-brand-orange p-6">
+            <div className="bg-gradient-to-r from-gray-500/90 to-gray-600 p-6">
               <h3 className="text-white font-bold mb-2">Free Track</h3>
               <p className="text-white/90">Start your AI journey with these essential modules</p>
             </div>
             
             <div className="p-6">
               <div className="space-y-6">
-                {freeCourses.map((course, index) => {
-                  // Extract colors from gradient string for dot color
-                  const colorClass = course.gradient.split(' ')[1]; // e.g. "to-blue-600"
-                  
-                  return (
-                    <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
-                      <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
-                      <CardContent className="p-4">
-                        <div className="flex">
-                          <div className="flex-shrink-0 mr-4">
-                            <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
-                              <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 1}</span>
-                            </div>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-lg">{course.title}</h4>
-                            <p className="text-gray-600 mb-2">{course.description}</p>
-                            <div className="flex text-sm text-gray-500">
-                              <span className="mr-4">{course.lessons} lessons</span>
-                              <span>{course.duration}</span>
-                            </div>
+                {freeCourses.map((course, index) => (
+                  <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
+                    <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
+                    <CardContent className="p-4">
+                      <div className="flex">
+                        <div className="flex-shrink-0 mr-4">
+                          <div className="w-10 h-10 rounded-full bg-gray-500/10 flex items-center justify-center">
+                            <span className="font-semibold text-gray-500">{index + 1}</span>
                           </div>
                         </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
+                        <div>
+                          <h4 className="font-semibold text-lg">{course.title}</h4>
+                          <p className="text-gray-600 mb-2">{course.description}</p>
+                          <div className="flex text-sm text-gray-500">
+                            <span className="mr-4">{course.lessons} lessons</span>
+                            <span>{course.duration}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
               
-              <Button asChild className="w-full mt-8 bg-brand-orange hover:bg-brand-orange/90">
+              <Button asChild className="w-full mt-8 bg-gray-500 hover:bg-gray-500/90">
                 <a href="#contact">Start Learning Free</a>
               </Button>
             </div>
@@ -123,40 +118,35 @@ const CourseSection: React.FC = () => {
               Most Popular
             </div>
             
-            <div className="bg-gradient-to-r from-brand-blue/90 to-brand-blue p-6">
+            <div className="bg-gradient-to-r from-yellow-400/90 to-yellow-500 p-6">
               <h3 className="text-white font-bold mb-2">Pro Track</h3>
               <p className="text-white/90">Advanced modules for serious productivity gains</p>
             </div>
             
             <div className="p-6">
               <div className="space-y-6">
-                {proCourses.map((course, index) => {
-                  // Extract colors from gradient string for dot color
-                  const colorClass = course.gradient.split(' ')[1]; // e.g. "to-amber-600"
-                  
-                  return (
-                    <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
-                      <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
-                      <CardContent className="p-4">
-                        <div className="flex">
-                          <div className="flex-shrink-0 mr-4">
-                            <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
-                              <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 4}</span>
-                            </div>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-lg">{course.title}</h4>
-                            <p className="text-gray-600 mb-2">{course.description}</p>
-                            <div className="flex text-sm text-gray-500">
-                              <span className="mr-4">{course.lessons} lessons</span>
-                              <span>{course.duration}</span>
-                            </div>
+                {proCourses.map((course, index) => (
+                  <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
+                    <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
+                    <CardContent className="p-4">
+                      <div className="flex">
+                        <div className="flex-shrink-0 mr-4">
+                          <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center">
+                            <span className="font-semibold text-yellow-500">{index + 4}</span>
                           </div>
                         </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
+                        <div>
+                          <h4 className="font-semibold text-lg">{course.title}</h4>
+                          <p className="text-gray-600 mb-2">{course.description}</p>
+                          <div className="flex text-sm text-gray-500">
+                            <span className="mr-4">{course.lessons} lessons</span>
+                            <span>{course.duration}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
               
               <div className="mt-8 mb-4">
@@ -164,7 +154,7 @@ const CourseSection: React.FC = () => {
                   <span className="text-2xl font-bold">$297</span>
                   <span className="text-gray-600 ml-2">one-time payment</span>
                 </div>
-                <Button asChild className="w-full bg-brand-blue hover:bg-brand-blue/90">
+                <Button asChild className="w-full bg-yellow-500 hover:bg-yellow-500/90">
                   <a href="#contact">Upgrade to Pro</a>
                 </Button>
               </div>

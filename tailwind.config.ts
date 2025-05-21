@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,13 +62,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Brand colors
+				// Updated Brand colors based on the premium color recommendations
 				brand: {
-					navy: '#1E2A38',    // Primary Navy
-					orange: '#F97316',  // Accent Orange 
-					blue: '#2563EB',    // Secondary Blue
-					beige: '#F4F1EC',   // Warm Beige
-					slate: '#64748B',   // Slate Gray
+					navy: '#1E2A38',    // Slate Navy - kept the same
+					orange: '#FBBF24',  // Updated to Amber
+					blue: '#6366F1',    // Updated to Indigo
+					beige: '#F4F1EC',   // Warm Beige - kept the same
+					slate: '#64748B',   // Cool Gray - Updated
+					gold: '#FACC15',    // Added Gold color
+					purple: '#7C3AED',  // Added Deep Purple for potential elite tier
 				}
 			},
 			borderRadius: {

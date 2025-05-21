@@ -83,17 +83,22 @@ const TestimonialSection: React.FC = () => {
               </div>
               
               <div className="flex items-center md:flex-col md:items-center md:text-center">
-                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
-                  <Calendar className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <div className="text-sm text-brand-slate">Schedule a Free Consultation</div>
-                  <Button asChild variant="link" className="p-0 h-auto font-medium text-green-600">
-                    <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                <a 
+                  href="https://calendly.com/clswift3313/first-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center md:flex-col md:items-center hover:text-green-600 transition-colors"
+                >
+                  <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
+                    <Calendar className="h-5 w-5 text-green-600" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-brand-slate">Schedule a Free Consultation</div>
+                    <span className="font-medium text-green-600">
                       Book a time slot
-                    </a>
-                  </Button>
-                </div>
+                    </span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>

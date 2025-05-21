@@ -5,6 +5,13 @@ const TestimonialSection: React.FC = () => {
   return (
     <section id="testimonials" className="section-padding bg-white">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="mb-4 text-brand-navy">What's <span className="text-gradient">Possible</span></h2>
+          <p className="text-xl text-brand-slate max-w-3xl mx-auto">
+            Discover the measurable impact our solutions can bring to your organization.
+          </p>
+        </div>
+        
         <div className="bg-white rounded-xl p-8 shadow-sm border border-brand-beige">
           <div className="flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/4 mb-6 md:mb-0 flex justify-center">

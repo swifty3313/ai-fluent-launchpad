@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -59,7 +58,7 @@ const HeroSection: React.FC = () => {
                     <div className="w-6 h-6 rounded-full bg-brand-blue/20 flex items-center justify-center text-xs font-medium text-brand-blue mr-2">AI</div>
                     <p className="text-sm font-medium">ChatGPT Assistant</p>
                   </div>
-                  <p className="text-brand-slate text-sm">I've summarized your meeting notes and highlighted 3 key follow-ups. Here's a quick draft of the action items to share with your team…</p>
+                  <p className="text-brand-slate text-sm">I've summarized your meeting notes and highlighted 3 key follow-ups. Here's a quick draft of the email with action items to share with your team…</p>
                 </div>
               </div>
             </div>

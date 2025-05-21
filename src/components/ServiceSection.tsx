@@ -32,13 +32,13 @@ const ServiceSection: React.FC = () => {
       action: "Explore Training"
     },
     {
-      title: "Custom GPT Consulting",
+      title: "Custom Solutions Consulting",
       description: "Expert guidance on building specialized AI assistants tailored to your specific needs.",
       icon: <Award className="h-6 w-6 text-white" />,
       features: [
         "Requirements analysis",
         "Knowledge base development",
-        "Custom GPT creation",
+        "1-on-1 and team consulting available",
         "Integration & optimization"
       ],
       primaryColor: "bg-green-600",

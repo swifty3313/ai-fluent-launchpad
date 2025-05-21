@@ -51,13 +51,18 @@ const TestimonialSection: React.FC = () => {
           <div className="bg-white rounded-xl p-8 border border-brand-beige/50 shadow-sm">            
             <div className="grid md:grid-cols-3 gap-6">
               <div className="flex items-center md:flex-col md:items-center md:text-center">
-                <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
-                  <Mail className="h-5 w-5 text-brand-orange" />
-                </div>
-                <div>
-                  <div className="text-sm text-brand-slate">Email Us</div>
-                  <div className="font-medium text-brand-navy">colin@fullsendaiconsulting.com</div>
-                </div>
+                <a 
+                  href="mailto:colin@fullsendaiconsulting.com" 
+                  className="flex items-center md:flex-col md:items-center hover:text-brand-orange transition-colors"
+                >
+                  <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
+                    <Mail className="h-5 w-5 text-brand-orange" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-brand-slate">Email Us</div>
+                    <div className="font-medium text-brand-navy">colin@fullsendaiconsulting.com</div>
+                  </div>
+                </a>
               </div>
               
               <div className="flex items-center md:flex-col md:items-center md:text-center">

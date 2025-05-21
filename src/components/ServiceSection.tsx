@@ -10,7 +10,7 @@ const ServiceSection: React.FC = () => {
       description: "Jumpstart your team's AI journey with focused, hands-on workshops that teach practical skills.",
       icon: <Briefcase className="h-6 w-6 text-white" />,
       features: [
-        "2-6 interactive sessions",
+        "2-6 hour",
         "Customized to your industry",
         "Hands-on exercises with real use cases",
         "Implementation roadmap"

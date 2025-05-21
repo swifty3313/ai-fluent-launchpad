@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Calendar } from 'lucide-react';
+import { Mail, Linkedin, Calendar } from 'lucide-react';
 
 const TestimonialSection: React.FC = () => {
   return (
@@ -62,7 +62,7 @@ const TestimonialSection: React.FC = () => {
               
               <div className="flex items-center md:flex-col md:items-center md:text-center">
                 <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
-                  <Phone className="h-5 w-5 text-brand-blue" />
+                  <Linkedin className="h-5 w-5 text-brand-blue" />
                 </div>
                 <div>
                   <div className="text-sm text-brand-slate">Connect with Us</div>

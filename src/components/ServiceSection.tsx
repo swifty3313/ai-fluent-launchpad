@@ -89,7 +89,7 @@ const ServiceSection: React.FC = () => {
                       : 'bg-green-600 hover:bg-green-600/90'
                   }`}
                 >
-                  <a href="#contact">{service.action}</a>
+                  <a href="https://calendly.com/clswift3313/first-consultation" target="_blank" rel="noopener noreferrer">{service.action}</a>
                 </Button>
               </div>
             </div>

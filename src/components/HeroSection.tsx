@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -30,16 +31,7 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex items-center space-x-4 mt-8">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-brand-slate/20 flex items-center justify-center text-xs font-medium text-brand-navy">JD</div>
-                <div className="w-8 h-8 rounded-full bg-brand-slate/20 flex items-center justify-center text-xs font-medium text-brand-navy">KL</div>
-                <div className="w-8 h-8 rounded-full bg-brand-slate/20 flex items-center justify-center text-xs font-medium text-brand-navy">MB</div>
-              </div>
-              <p className="text-sm text-brand-slate">
-                Joined by <span className="font-semibold">500+</span> AI productivity masters
-              </p>
-            </div>
+            {/* Removed the user avatars and count section that was here */}
           </div>
           
           <div className="w-full md:w-1/2 relative">

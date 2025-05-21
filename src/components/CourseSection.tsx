@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const CourseSection: React.FC = () => {
   const freeCourses = [
@@ -71,111 +72,128 @@ const CourseSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {/* Free Track */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="bg-gradient-to-r from-brand-orange/90 to-brand-orange p-6">
-              <h3 className="text-white font-bold mb-2">Free Track</h3>
-              <p className="text-white/90">Start your AI journey with these essential modules</p>
-            </div>
-            
-            <div className="p-6">
-              <div className="space-y-6">
-                {freeCourses.map((course, index) => {
-                  // Extract colors from gradient string for dot color
-                  const colorClass = course.gradient.split(' ')[1]; // e.g. "to-blue-600"
-                  
-                  return (
-                    <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
-                      <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
-                      <CardContent className="p-4">
-                        <div className="flex">
-                          <div className="flex-shrink-0 mr-4">
-                            <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
-                              <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 1}</span>
-                            </div>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-lg">{course.title}</h4>
-                            <p className="text-gray-600 mb-2">{course.description}</p>
-                            <div className="flex text-sm text-gray-500">
-                              <span className="mr-4">{course.lessons} lessons</span>
-                              <span>{course.duration}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
+        <Tabs defaultValue="free" className="w-full mb-12">
+          <TabsList className="w-full max-w-md mx-auto mb-8">
+            <TabsTrigger 
+              value="free" 
+              className="w-1/2 data-[state=active]:bg-brand-orange data-[state=active]:text-white"
+            >
+              Free Track
+            </TabsTrigger>
+            <TabsTrigger 
+              value="pro" 
+              className="w-1/2 data-[state=active]:bg-brand-blue data-[state=active]:text-white"
+            >
+              Pro Track
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="free" className="mt-0 animate-fade-in">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-brand-orange/90 to-brand-orange p-6">
+                <h3 className="text-white font-bold mb-2">Free Track</h3>
+                <p className="text-white/90">Start your AI journey with these essential modules</p>
               </div>
               
-              <Button asChild className="w-full mt-8 bg-brand-orange hover:bg-brand-orange/90">
-                <a href="#contact">Start Learning Free</a>
-              </Button>
-            </div>
-          </div>
-          
-          {/* Pro Track */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative">
-            <div className="absolute top-4 right-4 bg-yellow-100 text-yellow-700 text-xs font-medium px-2 py-1 rounded-full flex items-center">
-              <Star className="h-3 w-3 mr-1 fill-yellow-500 stroke-yellow-500" />
-              Most Popular
-            </div>
-            
-            <div className="bg-gradient-to-r from-brand-blue/90 to-brand-blue p-6">
-              <h3 className="text-white font-bold mb-2">Pro Track</h3>
-              <p className="text-white/90">Advanced modules for serious productivity gains</p>
-            </div>
-            
-            <div className="p-6">
-              <div className="space-y-6">
-                {proCourses.map((course, index) => {
-                  // Extract colors from gradient string for dot color
-                  const colorClass = course.gradient.split(' ')[1]; // e.g. "to-amber-600"
-                  
-                  return (
-                    <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
-                      <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
-                      <CardContent className="p-4">
-                        <div className="flex">
-                          <div className="flex-shrink-0 mr-4">
-                            <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
-                              <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 4}</span>
+              <div className="p-6">
+                <div className="space-y-6">
+                  {freeCourses.map((course, index) => {
+                    // Extract colors from gradient string for dot color
+                    const colorClass = course.gradient.split(' ')[1]; // e.g. "to-blue-600"
+                    
+                    return (
+                      <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
+                        <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
+                        <CardContent className="p-4">
+                          <div className="flex">
+                            <div className="flex-shrink-0 mr-4">
+                              <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
+                                <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 1}</span>
+                              </div>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-lg">{course.title}</h4>
+                              <p className="text-gray-600 mb-2">{course.description}</p>
+                              <div className="flex text-sm text-gray-500">
+                                <span className="mr-4">{course.lessons} lessons</span>
+                                <span>{course.duration}</span>
+                              </div>
                             </div>
                           </div>
-                          <div>
-                            <h4 className="font-semibold text-lg">{course.title}</h4>
-                            <p className="text-gray-600 mb-2">{course.description}</p>
-                            <div className="flex text-sm text-gray-500">
-                              <span className="mr-4">{course.lessons} lessons</span>
-                              <span>{course.duration}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
-              
-              <div className="mt-8 mb-4">
-                <div className="text-center mb-4">
-                  <span className="text-2xl font-bold">$297</span>
-                  <span className="text-gray-600 ml-2">one-time payment</span>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
                 </div>
-                <Button asChild className="w-full bg-brand-blue hover:bg-brand-blue/90">
-                  <a href="#contact">Upgrade to Pro</a>
+                
+                <Button asChild className="w-full mt-8 bg-brand-orange hover:bg-brand-orange/90">
+                  <a href="#contact">Start Learning Free</a>
                 </Button>
               </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="pro" className="mt-0 animate-fade-in">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative">
+              <div className="absolute top-4 right-4 bg-yellow-100 text-yellow-700 text-xs font-medium px-2 py-1 rounded-full flex items-center">
+                <Star className="h-3 w-3 mr-1 fill-yellow-500 stroke-yellow-500" />
+                Most Popular
+              </div>
               
-              <div className="flex items-center justify-center text-sm text-gray-500">
-                <Check className="h-4 w-4 mr-1 text-green-500" />
-                <span>14-day money-back guarantee</span>
+              <div className="bg-gradient-to-r from-brand-blue/90 to-brand-blue p-6">
+                <h3 className="text-white font-bold mb-2">Pro Track</h3>
+                <p className="text-white/90">Advanced modules for serious productivity gains</p>
+              </div>
+              
+              <div className="p-6">
+                <div className="space-y-6">
+                  {proCourses.map((course, index) => {
+                    // Extract colors from gradient string for dot color
+                    const colorClass = course.gradient.split(' ')[1]; // e.g. "to-amber-600"
+                    
+                    return (
+                      <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
+                        <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>
+                        <CardContent className="p-4">
+                          <div className="flex">
+                            <div className="flex-shrink-0 mr-4">
+                              <div className={`w-10 h-10 rounded-full bg-${colorClass.replace('to-', '')}/10 flex items-center justify-center`}>
+                                <span className={`font-semibold text-${colorClass.replace('to-', '')}`}>{index + 4}</span>
+                              </div>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-lg">{course.title}</h4>
+                              <p className="text-gray-600 mb-2">{course.description}</p>
+                              <div className="flex text-sm text-gray-500">
+                                <span className="mr-4">{course.lessons} lessons</span>
+                                <span>{course.duration}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </div>
+                
+                <div className="mt-8 mb-4">
+                  <div className="text-center mb-4">
+                    <span className="text-2xl font-bold">$297</span>
+                    <span className="text-gray-600 ml-2">one-time payment</span>
+                  </div>
+                  <Button asChild className="w-full bg-brand-blue hover:bg-brand-blue/90">
+                    <a href="#contact">Upgrade to Pro</a>
+                  </Button>
+                </div>
+                
+                <div className="flex items-center justify-center text-sm text-gray-500">
+                  <Check className="h-4 w-4 mr-1 text-green-500" />
+                  <span>14-day money-back guarantee</span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );

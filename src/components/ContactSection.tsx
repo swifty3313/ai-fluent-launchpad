@@ -1,33 +1,9 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
-import { Mail, Phone, Calendar, Check } from 'lucide-react';
+import { Mail, Phone, Calendar } from 'lucide-react';
+
 const ContactSection: React.FC = () => {
-  const {
-    toast
-  } = useToast();
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      console.log("Subscribing email:", email);
-      // In a real app, you would send this to your backend
-      toast({
-        title: "Thanks for subscribing!",
-        description: "You've been added to our newsletter list."
-      });
-      setSubscribed(true);
-      setEmail('');
-    } else {
-      toast({
-        title: "Email required",
-        description: "Please enter your email address.",
-        variant: "destructive"
-      });
-    }
-  };
   return <section id="contact" className="section-padding bg-brand-beige">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -37,14 +13,14 @@ const ContactSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Contact Methods */}
-          <div className="bg-white rounded-xl p-8 border border-brand-beige/50">
+        <div className="mb-16 max-w-3xl mx-auto">
+          {/* Contact Methods - Now full width */}
+          <div className="bg-white rounded-xl p-8 border border-brand-beige/50 shadow-sm">
             <h3 className="text-2xl font-bold mb-8 text-brand-navy">Get in Touch</h3>
             
-            <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mr-4">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="flex items-center md:flex-col md:items-center md:text-center">
+                <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
                   <Mail className="h-5 w-5 text-brand-orange" />
                 </div>
                 <div>
@@ -53,8 +29,8 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center mr-4">
+              <div className="flex items-center md:flex-col md:items-center md:text-center">
+                <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
                   <Phone className="h-5 w-5 text-brand-blue" />
                 </div>
                 <div>
@@ -63,8 +39,8 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+              <div className="flex items-center md:flex-col md:items-center md:text-center">
+                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
                   <Calendar className="h-5 w-5 text-green-600" />
                 </div>
                 <div>
@@ -78,33 +54,6 @@ const ContactSection: React.FC = () => {
               </div>
             </div>
           </div>
-          
-          {/* Newsletter Signup */}
-          <div className="bg-brand-navy rounded-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4 text-white">Join Our Newsletter</h3>
-            <p className="mb-6 text-brand-beige/80">
-              Get weekly AI productivity tips, exclusive tutorials, and updates on our latest courses.
-            </p>
-            
-            {subscribed ? <div className="flex items-center bg-white/10 rounded-lg p-4">
-                <Check className="h-6 w-6 mr-3 text-green-400" />
-                <p>Thanks for subscribing! Check your inbox soon.</p>
-              </div> : <form onSubmit={handleSubscribe} className="space-y-4">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-brand-beige/80">
-                    Email Address
-                  </label>
-                  <Input id="email" type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
-                </div>
-                <Button type="submit" className="w-full bg-brand-orange text-white hover:bg-brand-orange/90">
-                  Subscribe
-                </Button>
-              </form>}
-            
-            <div className="mt-6 text-sm text-brand-beige/80">
-              We respect your privacy. Unsubscribe at any time.
-            </div>
-          </div>
         </div>
         
         <div className="text-center">
@@ -116,4 +65,5 @@ const ContactSection: React.FC = () => {
       </div>
     </section>;
 };
+
 export default ContactSection;

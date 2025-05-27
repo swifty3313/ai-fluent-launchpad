@@ -8,49 +8,40 @@ const ServiceSection: React.FC = () => {
     {
       title: "AI Onboarding Workshops",
       description: "Jumpstart your team's AI journey with focused, hands-on workshops that teach practical skills.",
-      icon: <Briefcase className="h-6 w-6 text-brand-orange" />,
+      icon: <Briefcase className="h-6 w-6 text-white" />,
       features: [
         "2-6 hour interactive sessions",
         "Customized to your industry",
         "Hands-on exercises with real use cases",
         "Implementation roadmap"
       ],
-      primaryColor: "bg-brand-beige",
-      textColor: "text-brand-orange",
-      dotColor: "bg-brand-orange",
-      buttonColor: "bg-brand-orange hover:bg-brand-orange/90",
+      primaryColor: "bg-brand-orange",
       action: "Schedule Workshop"
     },
     {
       title: "Team Training Programs",
       description: "Comprehensive training for teams looking to develop advanced AI capabilities.",
-      icon: <Users className="h-6 w-6 text-brand-blue" />,
+      icon: <Users className="h-6 w-6 text-white" />,
       features: [
         "Multi-week structured program",
         "Role-specific training paths",
         "Weekly coaching calls",
         "Custom workflow development"
       ],
-      primaryColor: "bg-brand-beige",
-      textColor: "text-brand-blue",
-      dotColor: "bg-brand-blue",
-      buttonColor: "bg-brand-blue hover:bg-brand-blue/90",
+      primaryColor: "bg-brand-blue",
       action: "Explore Training"
     },
     {
       title: "Custom Solutions Consulting",
       description: "Expert guidance on building specialized AI assistants tailored to your specific needs.",
-      icon: <Award className="h-6 w-6 text-green-600" />,
+      icon: <Award className="h-6 w-6 text-white" />,
       features: [
         "Requirements analysis",
         "Knowledge base development",
         "1-on-1 and team consulting available",
         "Integration & optimization"
       ],
-      primaryColor: "bg-brand-beige",
-      textColor: "text-green-600",
-      dotColor: "bg-green-600",
-      buttonColor: "bg-green-600 hover:bg-green-600/90",
+      primaryColor: "bg-green-600",
       action: "Get Consulting"
     }
   ];
@@ -69,11 +60,11 @@ const ServiceSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-xl shadow-sm border border-brand-beige/50 overflow-hidden hover:shadow-md transition-shadow">
-              <div className={`${service.primaryColor} p-4 flex items-center border-b border-gray-200`}>
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-gray-200">
+              <div className={`${service.primaryColor} p-4 flex items-center`}>
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
                   {service.icon}
                 </div>
-                <h3 className={`${service.textColor} font-semibold ml-4`}>{service.title}</h3>
+                <h3 className="text-white font-semibold ml-4">{service.title}</h3>
               </div>
               
               <div className="p-6">
@@ -82,7 +73,7 @@ const ServiceSection: React.FC = () => {
                 <div className="space-y-3 mb-8">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start">
-                      <div className={`w-2 h-2 ${service.dotColor} rounded-full mt-2 mr-3`}></div>
+                      <div className={`w-2 h-2 ${service.primaryColor} rounded-full mt-2 mr-3`}></div>
                       <span className="text-brand-slate">{feature}</span>
                     </div>
                   ))}
@@ -90,7 +81,13 @@ const ServiceSection: React.FC = () => {
                 
                 <Button 
                   asChild 
-                  className={`w-full ${service.buttonColor}`}
+                  className={`w-full ${
+                    service.primaryColor === 'bg-brand-orange' 
+                      ? 'bg-brand-orange hover:bg-brand-orange/90' 
+                      : service.primaryColor === 'bg-brand-blue'
+                      ? 'bg-brand-blue hover:bg-brand-blue/90'
+                      : 'bg-green-600 hover:bg-green-600/90'
+                  }`}
                 >
                   <a href="https://calendly.com/clswift3313/first-consultation" target="_blank" rel="noopener noreferrer">{service.action}</a>
                 </Button>

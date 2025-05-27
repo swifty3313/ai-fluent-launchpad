@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Calendar } from 'lucide-react';
-
 const TestimonialSection: React.FC = () => {
-  return (
-    <section id="testimonials" className="section-padding bg-white">
+  return <section id="testimonials" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="mb-4 text-brand-navy">Ready to see what's <span className="text-gradient">Possible?</span></h2>
@@ -51,11 +48,8 @@ const TestimonialSection: React.FC = () => {
           <div className="bg-white rounded-xl p-8 border border-brand-beige/50 shadow-sm">            
             <div className="grid md:grid-cols-3 gap-6">
               <div className="flex items-center md:flex-col md:items-center md:text-center">
-                <a 
-                  href="mailto:colin@fullsendaiconsulting.com" 
-                  className="flex items-center md:flex-col md:items-center hover:text-brand-orange transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
+                <a href="mailto:colin@fullsendaiconsulting.com" className="flex items-center md:flex-col md:items-center hover:text-brand-orange transition-colors">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 md:mr-0 md:mb-3 bg-slate-400">
                     <Mail className="h-5 w-5 text-brand-orange" />
                   </div>
                   <div>
@@ -71,24 +65,14 @@ const TestimonialSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-sm text-brand-slate">Connect with Us</div>
-                  <a 
-                    href="https://www.linkedin.com/company/full-send-ai-consulting/?viewAsMember=true" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="font-medium text-brand-navy hover:text-brand-blue transition-colors"
-                  >
+                  <a href="https://www.linkedin.com/company/full-send-ai-consulting/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">
                     LinkedIn
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center md:flex-col md:items-center md:text-center">
-                <a 
-                  href="https://calendly.com/clswift3313/first-consultation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center md:flex-col md:items-center hover:text-green-600 transition-colors"
-                >
+                <a href="https://calendly.com/clswift3313/first-consultation" target="_blank" rel="noopener noreferrer" className="flex items-center md:flex-col md:items-center hover:text-green-600 transition-colors">
                   <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4 md:mr-0 md:mb-3">
                     <Calendar className="h-5 w-5 text-green-600" />
                   </div>
@@ -110,8 +94,6 @@ const TestimonialSection: React.FC = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialSection;

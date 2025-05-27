@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
               <div className="bg-white rounded-lg p-6">
                 <div className="border border-brand-beige rounded-md p-4 mb-4">
                   <div className="flex items-center mb-2">
-                    <div className="w-6 h-6 rounded-full bg-brand-orange/20 flex items-center justify-center text-xs font-medium text-brand-orange mr-2">You</div>
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium text-brand-orange mr-2 bg-slate-500">You</div>
                     <p className="text-sm font-medium">Team Lead</p>
                   </div>
                   <p className="text-brand-slate text-sm">Summarize this meeting transcript and create a follow-up email I can send to my team.</p>

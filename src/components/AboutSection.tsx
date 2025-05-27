@@ -1,25 +1,17 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
-
 const AboutSection: React.FC = () => {
-  const features = [
-    {
-      title: "Profile Setup & Optimization",
-      description: "We help you set up and optimize AI tools and profiles for maximum effectiveness."
-    },
-    {
-      title: "Custom AI Solutions",
-      description: "Design specialized AI solutions tailored to your specific industry and workflow needs."
-    },
-    {
-      title: "Workflow Integration",
-      description: "Seamlessly integrate AI tools into your existing workflows for enhanced productivity."
-    }
-  ];
-
-  return (
-    <section id="about" className="section-padding bg-white">
+  const features = [{
+    title: "Profile Setup & Optimization",
+    description: "We help you set up and optimize AI tools and profiles for maximum effectiveness."
+  }, {
+    title: "Custom AI Solutions",
+    description: "Design specialized AI solutions tailored to your specific industry and workflow needs."
+  }, {
+    title: "Workflow Integration",
+    description: "Seamlessly integrate AI tools into your existing workflows for enhanced productivity."
+  }];
+  return <section id="about" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="mb-4 text-brand-navy">About <span className="text-gradient">Full Send AI</span></h2>
@@ -30,15 +22,13 @@ const AboutSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-brand-beige rounded-xl p-6 shadow-sm border border-brand-beige/50 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mb-4">
+          {features.map((feature, index) => <div key={index} className="bg-brand-beige rounded-xl p-6 shadow-sm border border-brand-beige/50 hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-slate-500">
                 <Check className="h-6 w-6 text-brand-orange" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-brand-navy">{feature.title}</h3>
               <p className="text-brand-slate">{feature.description}</p>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         <div className="mt-16 bg-brand-navy/5 rounded-xl p-6 md:p-10">
@@ -66,7 +56,7 @@ const AboutSection: React.FC = () => {
             </div>
             <div className="w-full md:w-1/3 bg-white rounded-lg shadow p-6 border border-brand-beige/50">
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-orange/10 mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-slate-500">
                   <span className="text-2xl font-bold text-brand-orange">3X</span>
                 </div>
                 <h4 className="text-lg font-semibold mb-2 text-brand-navy">Average Productivity Boost</h4>
@@ -78,8 +68,6 @@ const AboutSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;

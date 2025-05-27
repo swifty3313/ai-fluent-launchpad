@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -8,7 +7,7 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
             <div className="mb-6">
-              <div className="inline-block text-brand-orange rounded-full px-3 py-1 text-sm font-medium mb-4 bg-yellow-100">
+              <div className="inline-block text-brand-orange rounded-full px-3 py-1 text-sm font-medium mb-4 bg-slate-500">
                 Next-Gen AI Training
               </div>
               <h1 className="font-bold leading-tight mb-4 text-brand-navy">

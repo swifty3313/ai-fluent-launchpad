@@ -128,10 +128,10 @@ const LearnPage: React.FC = () => {
           <p className="text-white/80 mb-4">
             Need help? Email us at{' '}
             <a 
-              href="mailto:hi@fullsendaiconsulting.com" 
+              href="mailto:colin@fullsendaiconsulting.com" 
               className="text-brand-orange hover:text-brand-orange/80 transition-colors"
             >
-              hi@fullsendaiconsulting.com
+              colin@fullsendaiconsulting.com
             </a>
           </p>
           <p className="text-white/60 text-sm">

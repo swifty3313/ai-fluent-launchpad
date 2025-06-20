@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from 'react-router-dom';
 
 const CourseSection: React.FC = () => {
   const freeCourses = [
@@ -105,7 +106,7 @@ const CourseSection: React.FC = () => {
               </div>
               
               <Button asChild className="w-full mt-8 bg-gray-500 hover:bg-gray-500/90">
-                <a href="#contact">Start Learning Free</a>
+                <Link to="/learn">Start Learning Free</Link>
               </Button>
             </div>
           </div>

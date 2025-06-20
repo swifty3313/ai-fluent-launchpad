@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,29 +13,29 @@ const Navbar: React.FC = () => {
     <nav className="sticky top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
+        <Link to="/" className="flex items-center">
           <h2 className="text-xl font-bold">
             <span className="text-brand-orange">Full Send</span> 
             <span className="text-brand-navy">AI</span>
           </h2>
-        </div>
+        </Link>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="#about" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
+          <a href="/#about" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
             About
           </a>
-          <a href="#courses" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
+          <a href="/#courses" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
             Courses
           </a>
-          <a href="#services" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
+          <a href="/#services" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
             Services
           </a>
-          <a href="#testimonials" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
+          <a href="/#testimonials" className="text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors">
             Testimonials
           </a>
           <Button asChild className="bg-brand-orange hover:bg-brand-orange/90 text-white">
-            <a href="#contact">Get Started</a>
+            <a href="/#contact">Get Started</a>
           </Button>
         </div>
 

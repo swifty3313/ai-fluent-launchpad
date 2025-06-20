@@ -109,6 +109,34 @@ const LearnPage: React.FC = () => {
           </Button>
         </div>
       </section>
+
+      {/* Custom Footer for Learn Page */}
+      <footer className="bg-brand-navy py-12">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center mb-6">
+            <img 
+              src="/lovable-uploads/57d17de4-cf52-452c-887c-dc2631f77e86.png" 
+              alt="Full Send AI Logo" 
+              className="w-10 h-10 mr-3"
+            />
+            <h3 className="text-white font-bold text-xl">
+              Full Send AI
+            </h3>
+          </div>
+          <p className="text-white/80 mb-4">
+            Need help? Email us at{' '}
+            <a 
+              href="mailto:colin@fullsendaiconsulting.com" 
+              className="text-brand-orange hover:text-brand-orange/80 transition-colors"
+            >
+              colin@fullsendaiconsulting.com
+            </a>
+          </p>
+          <p className="text-white/60 text-sm">
+            © 2024 Full Send AI Consulting. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

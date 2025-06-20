@@ -132,9 +132,6 @@ const LearnPage: React.FC = () => {
               colin@fullsendaiconsulting.com
             </a>
           </p>
-          <p className="text-white/60 text-sm">
-            © 2024 Full Send AI Consulting. All rights reserved.
-          </p>
         </div>
       </footer>
     </div>

@@ -80,13 +80,10 @@ const LearnPage: React.FC = () => {
                     </div>
                   </div>
                   <Button 
-                    asChild 
                     className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white group-hover:bg-brand-orange group-hover:hover:bg-brand-orange/90 transition-all"
                   >
-                    <a href={course.url} target="_blank" rel="noopener noreferrer">
-                      Launch Course
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
+                    Launch Course
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>

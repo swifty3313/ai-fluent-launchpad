@@ -7,24 +7,24 @@ import { Card, CardContent } from "@/components/ui/card";
 const CourseSection: React.FC = () => {
   const freeCourses = [
     {
-      title: "AI Fundamentals",
-      description: "Understand how AI and Large Language Models work",
+      title: "Welcome to Full Send AI: Course Kickoff",
+      description: "Start here to learn what Full Send AI is all about, your guide to mastering ChatGPT like a pro."
       lessons: 5,
-      duration: "2 hours",
+      duration: "3 minutes",
       gradient: "from-gray-400/80 to-gray-500"
     },
     {
-      title: "Basic Prompt Engineering",
-      description: "Learn how to craft effective prompts for better results",
+      title: "ChatGPT Starter Kit: Learn the Basics Fast",
+      description: "New to ChatGPT? This is the perfect launchpad, no experience required.",
       lessons: 4,
-      duration: "1.5 hours",
+      duration: "45-60 minutes",
       gradient: "from-gray-400/80 to-gray-500"
     },
     {
-      title: "Workflow Integration Basics",
-      description: "Start integrating AI into your daily tasks",
+      title: "Full Send's Introduction to Prompt Engineering",
+      description: "Take your prompting from basic to brilliant using the Full Send Framework.",
       lessons: 3,
-      duration: "1 hour",
+      duration: "1-2 hours",
       gradient: "from-gray-400/80 to-gray-500"
     }
   ];

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star } from 'lucide-react';
@@ -95,7 +96,7 @@ const CourseSection: React.FC = () => {
                           <p className="text-gray-600 mb-2">{course.description}</p>
                           <div className="flex text-sm text-gray-500">
                             <span className="mr-4">{course.lessons} lessons</span>
-                            <span>{course.duration}</span>
+                            <span>Duration: {course.duration}</span>
                           </div>
                         </div>
                       </div>
@@ -139,7 +140,7 @@ const CourseSection: React.FC = () => {
                           <p className="text-gray-600 mb-2">{course.description}</p>
                           <div className="flex text-sm text-gray-500">
                             <span className="mr-4">{course.lessons} lessons</span>
-                            <span>{course.duration}</span>
+                            <span>Duration: {course.duration}</span>
                           </div>
                         </div>
                       </div>

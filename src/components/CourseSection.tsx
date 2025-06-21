@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star } from 'lucide-react';
@@ -10,7 +9,7 @@ const CourseSection: React.FC = () => {
     {
       title: "Welcome to Full Send AI: Course Kickoff",
       description: "Start here to learn what Full Send AI is all about, your guide to mastering ChatGPT like a pro.",
-      lessons: 1
+      lessons: 1,
       duration: "3 minutes",
       gradient: "from-gray-400/80 to-gray-500"
     },

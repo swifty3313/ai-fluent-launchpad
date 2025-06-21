@@ -8,7 +8,7 @@ const CourseSection: React.FC = () => {
   const freeCourses = [
     {
       title: "Welcome to Full Send AI: Course Kickoff",
-      description: "Start here to learn what Full Send AI is all about, your guide to mastering ChatGPT like a pro.",,
+      description: "Start here to learn what Full Send AI is all about, your guide to mastering ChatGPT like a pro.",
       duration: "3 minutes",
       gradient: "from-gray-400/80 to-gray-500"
     },

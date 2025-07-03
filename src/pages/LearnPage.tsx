@@ -9,7 +9,7 @@ const LearnPage: React.FC = () => {
       title: "Welcome to Full Send AI: Course Kickoff",
       subtitle: "Start here to learn what Full Send AI is all about, your guide to mastering ChatGPT like a pro.",
       duration: "3 minutes",
-      url: "https://rise.articulate.com/share/091K8RM_rX6fsSzkf_grRtdeupdCWGlP"
+      url: "https://rise.articulate.com/share/6j8LW6TmO1uvuTeAcbRPIFFYxn5FcMI9"
     },
     {
       title: "ChatGPT Starter Kit: Learn the Basics Fast",
@@ -21,7 +21,7 @@ const LearnPage: React.FC = () => {
       title: "Full Send's Introduction to Prompt Engineering",
       subtitle: "Take your prompting from basic to brilliant using the Full Send Framework.",
       duration: "1-2 hours",
-      url: "#" // Will be replaced with actual GitHub-hosted Rise 360 course URL
+      url: "https://rise.articulate.com/author/bVkuqp6Co4KneC5htkI1EFq3CMnE9naz#/author/course"
     }
   ];
 

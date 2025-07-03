@@ -10,7 +10,7 @@ const LearnPage: React.FC = () => {
       title: "Welcome to Full Send AI: Course Kickoff",
       subtitle: "Start here to learn what Full Send AI is all about, your guide to mastering ChatGPT like a pro.",
       duration: "3 minutes",
-      url: "#" // Will be replaced with actual GitHub-hosted Rise 360 course URL
+      url: "https://rise.articulate.com/share/6j8LW6TmO1uvuTeAcbRPIFFYxn5FcMI9"
     },
     {
       title: "ChatGPT Starter Kit: Learn the Basics Fast",
@@ -80,10 +80,13 @@ const LearnPage: React.FC = () => {
                     </div>
                   </div>
                   <Button 
+                    asChild
                     className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white group-hover:bg-brand-orange group-hover:hover:bg-brand-orange/90 transition-all"
                   >
-                    Launch Course
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <a href={course.url} target="_blank" rel="noopener noreferrer">
+                      Launch Course
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
                   </Button>
                 </CardContent>
               </Card>

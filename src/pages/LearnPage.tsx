@@ -15,7 +15,7 @@ const LearnPage: React.FC = () => {
       title: "ChatGPT Starter Kit: Learn the Basics Fast",
       subtitle: "New to ChatGPT? This is the perfect launchpad, no experience required.",
       duration: "45-60 minutes",
-      url: "#" // Will be replaced with actual GitHub-hosted Rise 360 course URL
+      url: "https://rise.articulate.com/share/091K8RM_rX6fsSzkf_grRtdeupdCWGlP"
     },
     {
       title: "Full Send's Introduction to Prompt Engineering",

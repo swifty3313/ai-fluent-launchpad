@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,7 +9,7 @@ const LearnPage: React.FC = () => {
       title: "Welcome to Full Send AI: Course Kickoff",
       subtitle: "Start here to learn what Full Send AI is all about, your guide to mastering ChatGPT like a pro.",
       duration: "3 minutes",
-      url: "https://rise.articulate.com/share/6j8LW6TmO1uvuTeAcbRPIFFYxn5FcMI9"
+      url: "https://rise.articulate.com/share/091K8RM_rX6fsSzkf_grRtdeupdCWGlP"
     },
     {
       title: "ChatGPT Starter Kit: Learn the Basics Fast",

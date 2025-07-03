@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,7 +22,7 @@ const LearnPage: React.FC = () => {
       title: "Full Send's Introduction to Prompt Engineering",
       subtitle: "Take your prompting from basic to brilliant using the Full Send Framework.",
       duration: "1-2 hours",
-      url: "https://rise.articulate.com/author/bVkuqp6Co4KneC5htkI1EFq3CMnE9naz#/author/course"
+      url: "https://rise.articulate.com/share/6j8LW6TmO1uvuTeAcbRPIFFYxn5FcMI9"
     }
   ];
 

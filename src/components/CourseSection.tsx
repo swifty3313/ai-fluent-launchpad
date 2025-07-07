@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star } from 'lucide-react';
@@ -114,11 +113,6 @@ const CourseSection: React.FC = () => {
 
           {/* Pro Track Column */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative">
-            <div className="absolute top-4 right-4 bg-yellow-100 text-yellow-700 text-xs font-medium px-2 py-1 rounded-full flex items-center">
-              <Star className="h-3 w-3 mr-1 fill-yellow-500 stroke-yellow-500" />
-              Most Popular
-            </div>
-            
             <div className="bg-gradient-to-r from-yellow-400/90 to-yellow-500 p-6">
               <h3 className="text-white font-bold mb-2">Pro Track</h3>
               <p className="text-white/90">Advanced modules for serious productivity gains</p>

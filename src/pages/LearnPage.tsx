@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock, ArrowRight } from 'lucide-react';
+import Navbar from '../components/Navbar';
 
 const LearnPage: React.FC = () => {
   const courses = [
@@ -28,6 +29,8 @@ const LearnPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-white to-brand-beige py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">

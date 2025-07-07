@@ -91,14 +91,6 @@ const TestimonialSection: React.FC = () => {
             </div>
           </div>
         </div>
-        
-        <div className="text-center mt-16">
-          <ContactForm>
-            <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white">
-              Contact Us
-            </Button>
-          </ContactForm>
-        </div>
       </div>
     </section>
   );

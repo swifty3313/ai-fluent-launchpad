@@ -1,8 +1,12 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Calendar } from 'lucide-react';
+import ContactForm from './ContactForm';
+
 const TestimonialSection: React.FC = () => {
-  return <section id="testimonials" className="section-padding bg-white">
+  return (
+    <section id="testimonials" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="mb-4 text-brand-navy">Ready to see what's <span className="text-gradient">Possible?</span></h2>
@@ -89,11 +93,15 @@ const TestimonialSection: React.FC = () => {
         </div>
         
         <div className="text-center mt-16">
-          <Button asChild size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white">
-            <a href="#courses">Contact Us</a>
-          </Button>
+          <ContactForm>
+            <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white">
+              Contact Us
+            </Button>
+          </ContactForm>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default TestimonialSection;

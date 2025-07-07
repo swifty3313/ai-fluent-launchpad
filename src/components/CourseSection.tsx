@@ -60,6 +60,13 @@ const CourseSection: React.FC = () => {
     }
   ];
 
+  const handleStartLearning = () => {
+    window.location.href = '/learn';
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  };
+
   return (
     <section id="courses" className="section-padding bg-brand-beige">
       <div className="container mx-auto px-4">
@@ -105,8 +112,11 @@ const CourseSection: React.FC = () => {
                 ))}
               </div>
               
-              <Button asChild className="w-full mt-8 bg-gray-500 hover:bg-gray-500/90">
-                <Link to="/learn">Start Learning Free</Link>
+              <Button 
+                onClick={handleStartLearning}
+                className="w-full mt-8 bg-gray-500 hover:bg-gray-500/90"
+              >
+                Start Learning Free
               </Button>
             </div>
           </div>

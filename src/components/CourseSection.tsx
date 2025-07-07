@@ -24,7 +24,7 @@ const CourseSection: React.FC = () => {
     {
       title: "Full Send's Introduction to Prompt Engineering",
       description: "Take your prompting from basic to brilliant using the Full Send Framework.",
-      lessons: 3,
+      lessons: 6,
       duration: "1-2 hours",
       gradient: "from-gray-400/80 to-gray-500"
     }

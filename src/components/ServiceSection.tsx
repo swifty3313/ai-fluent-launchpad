@@ -46,6 +46,13 @@ const ServiceSection: React.FC = () => {
     }
   ];
 
+  const getButtonLink = (action: string) => {
+    if (action === "Schedule Workshop" || action === "Get Consulting") {
+      return "https://calendly.com/clswift3313/first-consultation";
+    }
+    return "https://drive.google.com/file/d/1v8ufzO-JMo6anPA07swmoWXvG1LnywV3/view?usp=sharing";
+  };
+
   return (
     <section id="services" className="section-padding bg-brand-beige">
       <div className="container mx-auto px-4">
@@ -89,7 +96,7 @@ const ServiceSection: React.FC = () => {
                       : 'bg-green-600 hover:bg-green-600/90'
                   }`}
                 >
-                  <a href="https://drive.google.com/file/d/1v8ufzO-JMo6anPA07swmoWXvG1LnywV3/view?usp=sharing" target="_blank" rel="noopener noreferrer">{service.action}</a>
+                  <a href={getButtonLink(service.action)} target="_blank" rel="noopener noreferrer">{service.action}</a>
                 </Button>
               </div>
             </div>

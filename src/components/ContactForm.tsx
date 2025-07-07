@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, User, MessageSquare } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
 
 interface ContactFormProps {
   children: React.ReactNode;
@@ -17,30 +16,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
     email: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
-    });
-    
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
+  };
+
+  const createMailtoLink = () => {
+    const subject = encodeURIComponent(`Contact from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    return `mailto:colin@fullsendaiconsulting.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -52,7 +39,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
         <DialogHeader>
           <DialogTitle className="text-brand-navy">Contact Us</DialogTitle>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="name" className="text-brand-navy">Name</Label>
             <div className="relative">
@@ -63,7 +50,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
                 type="text"
                 value={formData.name}
                 onChange={handleChange}
-                required
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-orange focus:border-transparent"
                 placeholder="Your name"
               />
@@ -80,7 +66,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-orange focus:border-transparent"
                 placeholder="your@email.com"
               />
@@ -96,7 +81,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                required
                 className="w-full pl-10 pr-4 py-2 min-h-[100px] border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-orange focus:border-transparent resize-none"
                 placeholder="Tell us about your project or questions..."
               />
@@ -104,13 +88,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ children }) => {
           </div>
           
           <Button 
-            type="submit" 
-            disabled={isSubmitting}
+            asChild
             className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white"
           >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
+            <a href={createMailtoLink()}>
+              Send Email
+            </a>
           </Button>
-        </form>
+        </div>
       </DialogContent>
     </Dialog>
   );

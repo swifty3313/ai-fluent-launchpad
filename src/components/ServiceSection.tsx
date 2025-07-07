@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Briefcase, Users, Award } from 'lucide-react';
@@ -50,7 +49,7 @@ const ServiceSection: React.FC = () => {
     if (action === "Schedule Workshop" || action === "Get Consulting") {
       return "https://calendly.com/clswift3313/first-consultation";
     }
-    return "https://drive.google.com/file/d/1v8ufzO-JMo6anPA07swmoWXvG1LnywV3/view?usp=sharing";
+    return "https://drive.google.com/file/d/1-PNTmZNKgeg00MNZVuHbZ7a6ey1c8mhR/view?usp=sharing";
   };
 
   return (

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star } from 'lucide-react';
@@ -152,16 +151,6 @@ const CourseSection: React.FC = () => {
                     </CardContent>
                   </Card>
                 ))}
-              </div>
-              
-              <div className="mt-8 mb-4 opacity-50">
-                <div className="text-center mb-4">
-                  <span className="text-2xl font-bold">$297</span>
-                  <span className="text-gray-600 ml-2">one-time payment</span>
-                </div>
-                <Button asChild className="w-full bg-yellow-500 hover:bg-yellow-500/90">
-                  <a href="#contact">Upgrade to Pro</a>
-                </Button>
               </div>
               
               <div className="flex items-center justify-center text-sm text-gray-500 opacity-50">

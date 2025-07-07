@@ -113,16 +113,7 @@ const CourseSection: React.FC = () => {
           </div>
 
           {/* Pro Track Column */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative opacity-50">
-            {/* Coming Soon Overlay */}
-            <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-10 flex items-center justify-center">
-              <div className="text-center">
-                <div className="bg-brand-orange text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg">
-                  Coming Soon!
-                </div>
-              </div>
-            </div>
-            
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative">
             <div className="absolute top-4 right-4 bg-yellow-100 text-yellow-700 text-xs font-medium px-2 py-1 rounded-full flex items-center">
               <Star className="h-3 w-3 mr-1 fill-yellow-500 stroke-yellow-500" />
               Most Popular
@@ -134,7 +125,16 @@ const CourseSection: React.FC = () => {
             </div>
             
             <div className="p-6">
-              <div className="space-y-6">
+              <div className="space-y-6 relative opacity-50">
+                {/* Coming Soon Overlay for courses only */}
+                <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-10 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="bg-brand-orange text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg">
+                      Coming Soon!
+                    </div>
+                  </div>
+                </div>
+                
                 {proCourses.map((course, index) => (
                   <Card key={index} className="overflow-hidden border border-gray-100 shadow-sm">
                     <div className={`h-3 bg-gradient-to-r ${course.gradient}`}></div>

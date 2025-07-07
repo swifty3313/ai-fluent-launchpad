@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star } from 'lucide-react';
@@ -153,7 +154,7 @@ const CourseSection: React.FC = () => {
                 ))}
               </div>
               
-              <div className="mt-8 mb-4">
+              <div className="mt-8 mb-4 opacity-50">
                 <div className="text-center mb-4">
                   <span className="text-2xl font-bold">$297</span>
                   <span className="text-gray-600 ml-2">one-time payment</span>
@@ -163,7 +164,7 @@ const CourseSection: React.FC = () => {
                 </Button>
               </div>
               
-              <div className="flex items-center justify-center text-sm text-gray-500">
+              <div className="flex items-center justify-center text-sm text-gray-500 opacity-50">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 <span>14-day money-back guarantee</span>
               </div>

@@ -19,11 +19,11 @@ const HeroSection: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white">
-                  <a href="#courses">Start Learning Free</a>
+                  <a href="#courses">Start With Our Free Prompting Fluency Course</a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue/10">
                   <a href="#services" className="flex items-center">
-                    Explore Services
+                    Book Your Free AI Strategy Call
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>

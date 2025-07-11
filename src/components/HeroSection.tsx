@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
                 Seamlessly Integrate AI into <span className="text-gradient">your operations</span>
               </h1>
               <p className="text-lg md:text-xl text-brand-slate mb-8">
-                Master AI tools that transform your workflow. Learn to leverage ChatGPT and other AI technologies to boost your productivity and creativity.
+                We help business owners, business operators, and education professionals automate workflows, deploy GPTs, and embed AI across the tools you already use.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">

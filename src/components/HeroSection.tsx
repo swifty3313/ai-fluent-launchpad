@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
                 Next-Gen AI Training
               </div>
               <h1 className="font-bold leading-tight mb-4 text-brand-navy">
-                Seamlessly Integrate AI Into <span className="text-gradient">Your Business Operations</span>
+                Seamlessly Integrate AI Into Your <span className="text-gradient">Business Operations</span>
               </h1>
               <p className="text-lg md:text-xl text-brand-slate mb-8">
                 We help business owners, business operators, and education professionals automate workflows, deploy GPTs, and embed AI across the tools you already use.

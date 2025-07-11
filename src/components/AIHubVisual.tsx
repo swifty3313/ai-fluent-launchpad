@@ -73,6 +73,25 @@ const AIHubVisual: React.FC = () => {
         <span className="text-brand-navy font-bold text-sm">YOU</span>
       </div>
 
+      {/* Business Operations Ring */}
+      <div className="absolute z-10 w-32 h-32 rounded-full border-2 border-brand-gold/30 flex items-center justify-center"
+           style={{ left: 'calc(50% - 64px)', top: 'calc(50% - 64px)' }}>
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 128 128">
+          <defs>
+            <path
+              id="circle-path"
+              d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"
+              fill="none"
+            />
+          </defs>
+          <text className="fill-brand-navy text-xs font-medium">
+            <textPath href="#circle-path" startOffset="25%">
+              YOUR BUSINESS OPERATIONS
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
       {/* AI Tools */}
       {aiTools.map((tool) => (
         <div

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import AIHubVisual from "./AIHubVisual";
 const HeroSection: React.FC = () => {
   return <div className="relative bg-gradient-to-b from-white to-brand-beige">
       <div className="container mx-auto px-4 py-20 md:py-32">
@@ -34,28 +35,7 @@ const HeroSection: React.FC = () => {
           </div>
           
           <div className="w-full md:w-1/2 relative">
-            <div className="bg-gradient-to-br from-brand-orange to-brand-blue p-1 rounded-xl">
-              <div className="bg-white rounded-lg p-6">
-                <div className="border border-brand-beige rounded-md p-4 mb-4">
-                  <div className="flex items-center mb-2">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium text-brand-orange mr-2 bg-slate-500">You</div>
-                    <p className="text-sm font-medium">Team Lead</p>
-                  </div>
-                  <p className="text-brand-slate text-sm">Summarize this meeting transcript and create a follow-up email I can send to my team.</p>
-                </div>
-                
-                <div className="border border-brand-beige rounded-md p-4">
-                  <div className="flex items-center mb-2">
-                    <div className="w-6 h-6 rounded-full bg-brand-blue/20 flex items-center justify-center text-xs font-medium text-brand-blue mr-2">AI</div>
-                    <p className="text-sm font-medium">ChatGPT Assistant</p>
-                  </div>
-                  <p className="text-brand-slate text-sm">I've summarized your meeting notes and highlighted 3 key follow-ups. Here's a quick draft of the email with action items to share with your team…</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-beige rounded-full z-[-1] hidden md:block"></div>
+            <AIHubVisual />
           </div>
         </div>
       </div>

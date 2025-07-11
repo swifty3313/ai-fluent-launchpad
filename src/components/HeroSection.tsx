@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
                 Next-Gen AI Training
               </div>
               <h1 className="font-bold leading-tight mb-4 text-brand-navy">
-                Turn AI into your <span className="text-gradient">smartest teammate</span>
+                Seamlessly Integrate AI into <span className="text-gradient">your operations</span>
               </h1>
               <p className="text-lg md:text-xl text-brand-slate mb-8">
                 Master AI tools that transform your workflow. Learn to leverage ChatGPT and other AI technologies to boost your productivity and creativity.

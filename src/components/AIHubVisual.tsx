@@ -9,14 +9,14 @@ interface AITool {
 }
 
 const aiTools: AITool[] = [
-  { id: 'chatgpt', name: 'ChatGPT', logo: '🤖', useCase: 'Intelligent Conversations', position: { x: 0, y: -120 } },
-  { id: 'n8n', name: 'n8n', logo: '🔗', useCase: 'Workflow Automation', position: { x: 85, y: -85 } },
-  { id: 'relevance', name: 'Relevance', logo: '🎯', useCase: 'AI Agent Building', position: { x: 120, y: 0 } },
-  { id: 'zapier', name: 'Zapier', logo: '⚡', useCase: 'App Integration', position: { x: 85, y: 85 } },
-  { id: 'drive', name: 'Google Drive', logo: '📁', useCase: 'Document Automation', position: { x: 0, y: 120 } },
-  { id: 'slack', name: 'Slack', logo: '💬', useCase: 'Team Communication', position: { x: -85, y: 85 } },
-  { id: 'lovable', name: 'Lovable', logo: '💜', useCase: 'AI-Powered Development', position: { x: -120, y: 0 } },
-  { id: 'notion', name: 'Notion', logo: '📝', useCase: 'Knowledge Management', position: { x: -85, y: -85 } }
+  { id: 'chatgpt', name: 'ChatGPT', logo: '/lovable-uploads/49e79685-7a65-42e5-8ba4-bf9f2e68339e.png', useCase: 'Intelligent Conversations', position: { x: 0, y: -120 } },
+  { id: 'n8n', name: 'n8n', logo: '/lovable-uploads/c6fcffb4-3b9d-4350-a2f6-513b1949d3e9.png', useCase: 'Workflow Automation', position: { x: 85, y: -85 } },
+  { id: 'relevance', name: 'Relevance', logo: '/lovable-uploads/cd771f7f-7e35-40ba-9f5e-ceab0749b393.png', useCase: 'AI Agent Building', position: { x: 120, y: 0 } },
+  { id: 'zapier', name: 'Zapier', logo: '/lovable-uploads/16046bbe-637e-49d1-96bf-4c56472a8b5d.png', useCase: 'App Integration', position: { x: 85, y: 85 } },
+  { id: 'drive', name: 'Google Drive', logo: '/lovable-uploads/123e848c-a2cf-4e8d-adfb-e8792f998480.png', useCase: 'Document Automation', position: { x: 0, y: 120 } },
+  { id: 'slack', name: 'Slack', logo: '/lovable-uploads/e123ff7e-72c6-4878-abd3-24ec9794b4ac.png', useCase: 'Team Communication', position: { x: -85, y: 85 } },
+  { id: 'lovable', name: 'Lovable', logo: '/lovable-uploads/10f2dc82-510a-493b-993f-e859506d9a64.png', useCase: 'AI-Powered Development', position: { x: -120, y: 0 } },
+  { id: 'notion', name: 'Notion', logo: '/lovable-uploads/5d8bfc9a-8f2b-472a-b874-15c7024e0aa9.png', useCase: 'Knowledge Management', position: { x: -85, y: -85 } }
 ];
 
 const AIHubVisual: React.FC = () => {
@@ -69,8 +69,8 @@ const AIHubVisual: React.FC = () => {
       </svg>
 
       {/* Central hub - YOU */}
-      <div className="relative z-10 w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg">
-        <span className="text-white font-bold text-sm">YOU</span>
+      <div className="relative z-10 w-20 h-20 bg-brand-gold rounded-full flex items-center justify-center shadow-lg">
+        <span className="text-brand-navy font-bold text-sm">YOU</span>
       </div>
 
       {/* AI Tools */}
@@ -91,7 +91,7 @@ const AIHubVisual: React.FC = () => {
               ? 'bg-gradient-to-br from-primary to-secondary scale-110' 
               : 'bg-white border-2 border-primary/20'
           }`}>
-            <span className="text-lg">{tool.logo}</span>
+            <img src={tool.logo} alt={tool.name} className="w-6 h-6 object-contain" />
           </div>
           
           {/* Tool name */}
